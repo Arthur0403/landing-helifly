@@ -1,0 +1,130 @@
+body {
+	@include reset-indent;
+
+	@include font($main-font-size, normal, $main-line-height, $main-text-color);
+	font-family: $main-font-family;
+}
+
+/* Не забыть удалить */
+
+.gallerry__image {
+	width: 100%;
+}
+
+.youtube-video {
+	display: none;
+}
+
+/* Не забыть удалить конец */
+
+*:focus {
+	outline       : none;
+	box-shadow    : 0 0 0 2px #ffffff,0 0 5px 3px #3f89bf;
+	z-index       : z('focus');
+	border-radius : 5px;
+}
+
+.modal:focus,
+.modal-right:focus {
+	box-shadow: none;
+}
+
+.header__inner,
+.about-me__inner,
+.banner__inner,
+.main-description__inner,
+.gallery__inner,
+.about-me__inner,
+.schedule__inner,
+.impressions__inner,
+.footer__inner {
+	padding: 0 5%; //4.6 - 15px
+}
+
+.visually-hidden {
+	position : absolute !important;
+
+	overflow : hidden;
+	clip     : rect(1px 1px 1px 1px);
+	clip     : rect(1px, 1px, 1px, 1px);
+
+	padding  : 0 !important;
+	width    : 1px !important;
+	height   : 1px !important;
+
+	border   : 0 !important;
+}
+
+.list {
+	list-style-type: none;
+	.list-item {
+		padding-left: 0;
+	}
+}
+
+.rate {
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 9px;
+	margin-bottom: 0;
+	.rate__stars {
+		display: inline-block;
+		padding-left: 0;
+
+		&::before {
+			content: url('../img/icons/star.svg');
+			width: 18px;
+			height: 17px;
+		}
+	}
+}
+
+.achievements {
+	@include flex(row, flex-start);
+	align-items: center;
+	padding: 14px 0;
+	border-top: 1px solid $grey-text-color;
+	border-bottom: 1px solid $grey-text-color;
+		.achievements__icon::before {
+			content: url('../img/icons/no-dark-win.svg');
+			height: 41px;
+			margin-right: 11px;
+		}
+
+		.achievment__right-side {
+			.achievements__reviews-text {
+				margin: 0;
+			}
+		}
+}
+
+// .form-button {
+// 	position        : relative;
+
+// 	display         : block;
+
+// 	padding         : 18px 0;
+
+// 	@include font($main-font-family, 1.067em, 500, $main-line-height, $main-text-color, $main-color-background);
+
+// 	transition      : all 300ms ease;
+// 	text-decoration : none;
+
+// 	border          : 1px solid $main-text-color;
+// 	border-radius   : 5px;
+
+// 	&:hover {
+// 		color          : $main-color-background;
+
+// 		letter-spacing : 1.1px;
+
+// 		background     : $main-text-color;
+// 		box-shadow     : $button-shadow;
+// 	}
+
+// 	&:active {
+// 		letter-spacing: 0;
+
+// 		box-shadow    : none;
+// 	}
+// }

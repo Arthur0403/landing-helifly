@@ -1,0 +1,25 @@
+.header__inner {
+    @include flex(row, space-between);
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo-img {
+    width: 84px;
+}
+
+.header__phone {
+    display: none;
+}
+
+.header__location {
+    margin-right: 45px;
+    // @include font(14px, normal, 17px, $button-text-collor);
+    // text-align: center;
+    color: $button-text-collor;
+}
+
+.header__callback {
+    display: none;
+}

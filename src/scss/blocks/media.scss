@@ -1,0 +1,312 @@
+@media (min-width: 768px) {
+
+    .header__inner,
+    .banner__inner,
+    .main-description__inner,
+    .gallery__inner,
+    .about-me__inner,
+    .schedule__inner,
+    .impressions__inner,
+    .footer__inner {
+        max-width: $desktop-unit;
+        margin: 0 auto;
+    }
+
+    .header__inner {
+        justify-content: flex-start;
+        padding-top: 38px;
+        padding-bottom: 38px;
+
+        .logo-img {
+            width: 129px;
+        }
+
+        .header__phone {
+            display: block;
+            margin-left: 36px;
+            color: $grey-text-color;
+            font-size: 1.125rem;
+
+            .header-phone__num {
+                text-decoration: none;
+                color: $main-text-color;
+            }
+        }
+
+        .header__location {
+            display: none;
+        }
+
+        .header-icon {
+            display: none;
+        }
+
+        .header__callback {
+            width: 165px;
+            height: 50px;
+            margin-left: auto;
+            background-color: $callback-btn;
+            border-radius: 3px;
+            border: none;
+            @include font(14px, normal, 17px, $white);
+        }
+
+    }
+
+    .banner {
+        padding-top: 286px;
+        padding-bottom: 260px;
+        background: url("../img/gallery/helimain.jpg") no-repeat center;
+        background-size: cover;
+
+        .banner__inner {
+
+            .banner__title {
+                max-width: 877px;
+                margin-bottom: 29px;
+                margin-top: 0;
+                font-size: 40px;
+                line-height: 49px;
+            }
+
+            .label {
+                width: 224px;
+                height: 104px;
+                margin-bottom: 12px;
+
+                .label__text {
+
+                    .label__cost {
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+
+                    .label__cost-price {
+                        font-size: 35px;
+                    }
+                }
+
+                .label__percent-icon {
+                    margin-top: 16px;
+                    margin-right: 29px;
+                }
+
+            }
+
+            .banner__btn {
+                padding: 24px 37px;
+                font-size: 1.125rem;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .main-description__inner {
+        padding-top: 70px;
+
+        .main-description__title {
+            display: inline-block;
+            width: 260px;
+            margin-top: 0;
+            margin-bottom: 18px;
+            @include font(40px, normal, 49px, $main-text-color);
+            text-align: left;
+        }
+
+        .youtube-block {
+            width: 554px;
+            height: 374px;
+            float: right;
+            margin-left: 39px;
+
+            .youtube-block__btn {
+                right: 41px;
+                bottom: 29px;
+            }
+
+            .youtube-video {
+                width: 554px;
+                height: 374px;
+            }
+        }
+
+        .main-description__description {
+            @include font(18px, normal, 26px, $main-text-color);
+            letter-spacing: 1.1px;
+        }
+
+        .main-description__list {
+            @include flex(column, flex-start);
+            padding-left: 0;
+
+            .clock {
+                order: 1;
+            }
+
+            .photo {
+                order: 2;
+            }
+
+            .language {
+                display: none;
+            }
+
+            .location__moscow {
+                display: block;
+                order: 3;
+            }
+
+            .question {
+                display: block;
+                order: 4;
+            }
+
+            .clock::before {
+                content: url('../img/icons/clock.svg');
+                width: 34px;
+                margin-right: 14px;
+            }
+
+            .photo::before {
+                content: url('../img/icons/photo.svg');
+                width: 35px;
+                margin-right: 8px;
+            }
+
+            .location::before {
+                content: url('../img/icons/location.svg');
+                height: 33px;
+                margin-right: 10px;
+            }
+
+            .question::before {
+                content: url('../img/icons/language.svg');
+                width: 31px;
+                margin-right: 12px;
+            }
+
+            .money::before {
+                content: url('../img/icons/money.svg');
+                width: 31px;
+                margin-right: 12px;
+            }
+
+            .location__dubai {
+                display: none;
+            }
+
+            .money {
+                display: none;
+            }
+        }
+
+    }
+
+    .main-description__list-item {
+        @include flex(row, flex-start);
+        align-items: center;
+        margin-bottom: 13px;
+        @include font(14px, normal, 20px, $main-text-color);
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .gallery {
+        max-width: $desktop-unit;
+        margin: 0 auto;
+        padding-top: 30px;
+
+        .gallery__title {
+            margin-bottom: 26px;
+            margin-left: 0;
+            @include font(20px, normal, 29px, $main-text-color);
+            text-align: left;
+            letter-spacing: 0;
+        }
+
+        .gallery__list {
+            @include flex(row, auto);
+            flex-wrap: wrap;
+            height: auto;
+            margin: 0;
+            padding-left: 0;
+
+            .gallery__item {
+                margin: 11px 5px;
+
+                .gallery__image {
+                    height: 185px;
+                }
+            }
+
+            .gallery__item:nth-child(4n){
+                margin-right: 0;
+            }
+
+            .gallery__item:nth-child(5n){
+                margin-left: 0;
+            }
+        }
+
+        .gallery__show-photo {
+            display: block;
+            margin: 0 auto;
+            margin-top: 34px;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            @include font(17px, 500, 25px, $button-text-collor);
+        }
+
+        .gallery__show-photo::before {
+            content: url('../img/icons/Arrow.svg');
+            width: 11px;
+            height: 6px;
+            margin-right: 10px;
+        }
+
+        .gallery__show-photo::after {
+            content: url('../img/icons/Arrow.svg');
+            width: 11px;
+            height: 6px;
+            margin-left: 10px;
+        }
+
+    }
+
+    .achievements {
+        padding-top: 31px;
+        padding-bottom: 31px;
+        width: 569px;
+    }
+
+    .achievment__right-side {
+        @include flex(row, flex-start);
+        align-items: center;
+
+        .achievements__reviews-text {
+            @include font(18px, normal, 26px, $main-text-color);
+        }
+
+        .rate.achievements__rate {
+            margin-top: 0;
+            margin-left: 14px;
+        }
+    }
+}
+
+@media (min-width: 1960px) {
+
+    .header__inner,
+    .banner__inner,
+    .main-description__inner,
+    .gallery__inner,
+    .about-me__inner,
+    .schedule__inner,
+    .impressions__inner,
+    .footer__inner {
+        padding: 0 20%;
+    }
+}

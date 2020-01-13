@@ -1,0 +1,130 @@
+.main-description__inner {
+
+    .main-description__title {
+        margin-bottom: 13px;
+        @include font(28px, normal, 34px, $main-text-color);
+        text-align: center;
+    }
+
+    .youtube-block {
+        position: relative;
+        width: 290px;
+        height: 197px;
+        margin-bottom: 30px;
+        background: url('../img/gallery/video.jpg') no-repeat center;
+        background-size: cover;
+        border-radius: 4px;
+
+        .youtube-block__btn {
+            display: block;
+            position: absolute;
+            right: 19px;
+            bottom: 19px;
+            border-style: solid;
+            border-width: 8.5px 0 8.5px 12px;
+            border-color: transparent transparent transparent $white;
+        }
+
+        .youtube-video {
+            display: none;
+            width: 290px;
+            height: 197px;
+        }
+    }
+
+    .main-description__description {
+        @include font(14px, normal, 20px, $main-text-color);
+        letter-spacing: 0.7px;
+    }
+
+    .main-description__list {
+        @include flex(column, flex-start);
+        padding-left: 0;
+
+        .clock {
+            order: 1;
+        }
+
+        .language {
+            order: 2;
+        }
+
+        .money {
+            order: 3;
+        }
+
+        .location__dubai {
+            order: 4;
+        }
+
+        .photo {
+            order: 5;
+        }
+
+        .clock::before{
+            content:url('../img/icons/clock.svg');
+            width: 32px;
+            margin-right: 11px;
+        }
+
+        .photo::before{
+            content:url('../img/icons/photo.svg');
+            width: 35px;
+            margin-right: 11px;
+        }
+
+        .location::before{
+            content:url('../img/icons/location.svg');
+            height: 31px;
+            margin-right: 11px;
+        }
+
+        .language::before{
+            content:url('../img/icons/language.svg');
+            height: 32px;
+            width: 32px;
+            margin-right: 11px;
+        }
+
+        .question::before {
+            content: url('../img/icons/language.svg');
+            height: 32px;
+            width: 32px;
+            margin-right: 11px;
+        }
+
+        .money::before{
+            content:url('../img/icons/money.svg');
+            width: 31px;
+            margin-right: 12px;
+        }
+
+        .question {
+            display: none;
+        }
+
+        .location__moscow {
+            display: none;
+        }
+    }
+}
+
+.main-description__list-item {
+    @include flex(row, flex-start);
+    align-items: center;
+    margin-bottom: 13px;
+    @include font(14px, normal, 20px, $main-text-color);
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.achievements__reviews-text {
+    @include font(14px, normal, 20px, $main-text-color);
+    letter-spacing: 1.1px;
+
+    span {
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,70 @@
+.about-me {
+    padding-top: 36px;
+    .about-me__avatar-block {
+        @include flex(column, center);
+        align-items: center;
+        position: relative;
+        padding-top: 13.5px;
+
+        .avatar-img {
+            height: 139px;
+            margin: 0 auto;
+        }
+
+        .avatar__text-block {
+            text-align: center;
+
+            .avatar__title {
+                margin-top: 13px;
+                margin-bottom: 7px;
+                @include font(18px, 500, 22px, $main-text-color);
+            }
+
+            .avatar__occupation {
+                @include font(14px, normal, 21px, $main-text-color);
+            }
+
+            .avatar__more-link {
+                display: block;
+                width: 174px;
+                margin-top: 7px;
+                @include font(14px, normal, 21px, $button-text-collor);
+            }
+        }
+    }
+
+    .about-me__avatar-block::after {
+        content: url('../img/icons/like.svg');
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 31px;
+        height: 27px;
+    }
+
+    .about-me-section {
+        .about-me-section__title {
+            margin-top: 25px;
+            margin-bottom: 14px;
+            @include font(18px, 500, 26px, $main-text-color);    
+        }
+
+        .about-me-section__text {
+            @include font(16px, normal, 24px, $main-text-color);    
+        }
+
+        .about-me-section__show-more {
+            display: block;
+            background: transparent;
+            border: 0;
+            @include font(16px, 500, 23px, $button-text-collor);
+        }
+
+        .about-me-section__show-more::after {
+            content: url('../img/icons/Arrow.svg');
+            width: 11px;
+            height: 6px;
+            margin-left: 10px;
+        }
+    }
+}

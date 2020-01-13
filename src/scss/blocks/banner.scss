@@ -1,0 +1,63 @@
+.banner {
+    padding-top: 142px;
+    padding-bottom: 154px;
+    background: url("../img/gallery/helimain_mob.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.banner__title {
+    margin-top: 0;
+    margin-bottom: 36px;
+    @include font(2rem, bold, 39px, $white);
+    letter-spacing: 1.01px;
+
+    span {
+        color: $accent-color;
+    }
+}
+
+.label {
+    width: 200px;
+    height: 90px;
+    margin-bottom: 14px;
+    background: url('../img/Rectangle6.2.svg') no-repeat center;
+    background-size: cover;
+}
+
+.label__text {
+    display: inline-block;
+    margin-top: 9px;
+    margin-left: 17px;
+    padding-bottom: 22px;
+}
+
+.label__cost {
+    @include font(1.125rem, normal, 27px, $white);
+}
+
+.label__cost-price {
+    @include font(30px, 800, 1, $white);
+}
+
+.label__percent-icon {
+    display: inline-block;
+    float: right;
+    margin-top: 15px;
+    margin-right: 16px;
+    width: 47px;
+    height: 47px;
+    border: 1px solid #FFFFFF;
+    border-radius: 100%;
+    @include font(30px, 800, 45px, $white);
+    text-align: center;
+}
+
+.banner__btn {
+    display: inline-block;
+    padding: 25px 33px;
+    border: 3px solid $white;
+    border-radius: 7px;
+    @include font(1rem, 900, 20px, $white);
+    text-align: center;
+    text-decoration: none;
+}

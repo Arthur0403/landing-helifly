@@ -1,0 +1,52 @@
+// sizes and indents
+$mobile-unit: 290px;
+$desktop-unit: 1140px;
+
+// media
+$mobile : 320px;
+
+// fonts
+$main-font-family   : "Montserrat", "Arial", sans-serif;
+$main-font-size     : 1rem;
+$main-line-height   : 1;
+
+// color
+$main-text-color        : #37373F;
+$grey-text-color        : #B3B3B3;
+$button-text-collor		: #5286EC;
+$accent-color			: #FC9B09;
+$white					: #FFFFFF;
+$border-grey			: #C7C7C7;
+$green					: #6AAD4A;
+$footer-bottom			: #FAF9F8;
+$callback-btn			: #C94042;
+
+//mixins
+@mixin flex($fx-direction, $fx-justify, $fx-display: flex) {
+	display        : $fx-display;
+	flex-direction : $fx-direction;
+	justify-content: $fx-justify;
+}
+
+@mixin font($f-size, $f-weight, $f-height, $f-color) {
+	font-size  : $f-size;
+	font-weight: $f-weight;
+	line-height: $f-height;
+	color      : $f-color;
+}
+
+@mixin reset-indent {
+	padding: 0;
+	margin : 0;
+}
+
+@mixin size ($weight, $height) {
+	width : $weight;
+	height: $height;
+}
+
+@mixin pseudo($display: block) {
+	content : '';
+	display : $display;
+	position: absolute;
+}
